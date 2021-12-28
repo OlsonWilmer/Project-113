@@ -1,35 +1,34 @@
-function preload() {
+function preload(){
 }
 
 function setup() {
-    canvas = createCanvas(640, 480);
-    canvas.position(110, 250);
+    canvas = createCanvas(500,400);
+    canvas.position(70,200);
     video = createCapture(VIDEO);
-    video(VIDEO, 60, 0, 640, 480);
     video.hide();
-    
-      
-    tint_color = "";
 }
 
 function draw() {
-    tint(tint_color);
-    ellipse(56, 46, 55, 55);
-    rect(83, 40, 460, 15);
-    ellipse(571, 46, 55, 55);
-    rect(562, 72, 20, 335);
-    ellipse(571, 435, 55, 55);
-    rect(47, 72, 20, 335);
-    ellipse(57, 435, 55, 55);
-    rect(83, 425, 460, 15);
+    image(video,100,80,300,250);
+
+    stroke(168, 10, 10);
+    fill(168, 10, 10);
+    
+    circle(40,40,50);
+    circle(460,40,50);
+    circle(40,360,50);
+    circle(460,360,50);
+
+
+    stroke(50, 168, 82);
+    fill(50, 168, 82);
+
+    rect(63, 27, 375, 25);
+    rect(63, 347, 375, 25);
+    rect(27, 63, 25, 275);
+    rect(448, 63, 25, 275);
 }
 
-function take_snapshot() {
-    save('student_name.png');
+function take_snapshot(){
+    save("frame.png");
 }
-
-function filter_tint()
-{
-    tint_color = document.getElementById("color_name").value;
-}
-
